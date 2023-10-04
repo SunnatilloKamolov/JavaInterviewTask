@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog system</title>
+</head>
+<body>
+<div class="container">
+    <h1>Blog management system</h1>
+    <hr>
+    <h2>Save blog</h2>
+    <form action="#" th:action="@{/saveBlog}" th:object="${blog}" method="post">
+        <label>
+            <input type="text" field="*{title}" placeholder="title" class="form-control mb-4 col-4">
+        </label>
+        <label>
+            <input type="text" field="*{theme}" placeholder="theme" class="form-control mb-4 col-4">
+        </label>
+        <label>
+            <input type="text" field="*{text}" placeholder="text" class="form-control mb-4 col-4">
+        </label>
+        <label>
+            <input type="text" field="*{createdDate}" placeholder="createdDate" class="form-control mb-4 col-4">
+        </label>
+        <label>
+            <input type="text" field="*{checked}" placeholder="checked(true/false)" class="form-control mb-4 col-4">
+        </label>
+        <br>
+        <button type="submit" class="btn btn-info col-2">Save blog</button>
+    </form>
+</div>
+
+</body>
+</html>

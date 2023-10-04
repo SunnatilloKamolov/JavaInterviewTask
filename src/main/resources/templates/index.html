@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs system </title>
+</head>
+<body>
+<div align="center" class="container my-2">
+    <h1>Blogs List</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th> Id </th>
+            <th> Title </th>
+            <th> Theme </th>
+            <th> Text </th>
+            <th> CreatedDate </th>
+            <th> NumberOfReadings </th>
+            <th> Checked </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="blog:${blogs}">
+            <td th:text="${blog.id }"></td>
+            <td th:text="${blog.title }"></td>
+            <td th:text="${blog.theme }"></td>
+            <td th:text="${blog.text }"></td>
+            <td th:text="${blog.createdDate }"></td>
+            <td th:text="${blog.numberOfReadings }"></td>
+            <td th:text="${blog.checked }"></td>
+
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+</body>
+</html>
